@@ -270,3 +270,11 @@ footer{background:var(--cream);padding:80px 0 40px;border-top:1px solid var(--li
   .hero-badge{left:0;width:108px;height:108px;}
   .sec-head{flex-direction:column;align-items:flex-start;}
 }
+
+/* ===== QDM 嵌入調整 ===== */
+/* 改用 QDM 平台自帶的頁首/頁尾（含購物車、會員、訂單功能），
+   隱藏設計內建的 nav 與 footer，避免頭尾各出現兩層。 */
+#hdr{display:none !important;}                 /* 隱藏設計內建導覽列 */
+footer:has(.foot-grid){display:none !important;} /* 只藏本設計的頁尾，不影響 QDM 頁尾 */
+.hero{padding-top:64px;}                        /* 收掉原本為固定 nav 預留的上方空白 */
+@media(max-width:960px){.hero{padding-top:40px;}}
