@@ -1,0 +1,205 @@
+<!-- ===== 伴生乳酪 · 一口乳酪球 產品描述（描述優化版，貼進 QDM「新增產品」HTML 欄）===== -->
+<!-- 不重複 QDM 原生商品標頭（標題/主圖/價格/購物車），只放補充內容 -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@300;400;500;600;700&display=swap');
+.bs-lp{--cream:#F7F1E6;--cream-deep:#EFE6D4;--paper:#FCFAF4;--ink:#2C241C;--ink-soft:#6E6052;--ink-faint:#A99C8B;--line:#E2D8C6;--gold:#BE9456;--gold-deep:#A2783B;--ease:cubic-bezier(.22,.61,.36,1);--serif:"Noto Serif TC",serif;--sans:"Noto Sans TC",sans-serif;--latin:"Cormorant Garamond",serif;font-family:var(--sans);color:var(--ink);line-height:1.85;letter-spacing:.02em;-webkit-font-smoothing:antialiased;background:var(--cream);}
+.bs-lp *{margin:0;padding:0;box-sizing:border-box;}
+.bs-lp img{display:block;max-width:100%;}
+.bs-lp h1,.bs-lp h2,.bs-lp h3,.bs-lp h4{font-family:var(--serif);font-weight:500;line-height:1.3;letter-spacing:.04em;}
+.bs-lp ::selection{background:var(--gold);color:var(--paper);}
+.bs-lp .wrap{max-width:1180px;margin:0 auto;padding:0 40px;}
+.bs-lp .eyebrow{font-family:var(--latin);font-size:15px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;display:flex;align-items:center;gap:14px;}
+.bs-lp .eyebrow::before{content:"";width:34px;height:1px;background:var(--gold);}
+.bs-lp .ph{position:relative;background-color:var(--cream-deep);background-image:repeating-linear-gradient(135deg,rgba(190,148,86,.10) 0 1px,transparent 1px 13px);display:flex;align-items:center;justify-content:center;overflow:hidden;transition:background-color .6s var(--ease);}
+.bs-lp .ph span{font-family:"Courier New",monospace;font-size:12px;letter-spacing:.14em;color:var(--gold-deep);text-transform:uppercase;background:rgba(252,250,244,.78);padding:7px 13px;border:1px solid rgba(162,120,59,.4);border-radius:2px;}
+/* intro */
+.bs-lp .lp-intro{padding:54px 0 8px;}
+.bs-lp .lp-intro .latin{font-family:var(--latin);font-style:italic;font-size:22px;color:var(--gold-deep);margin:12px 0 0;}
+.bs-lp .lp-intro .lead{font-size:17px;color:var(--ink-soft);max-width:720px;margin:22px 0 0;line-height:2;}
+.bs-lp .spec-row{display:flex;gap:30px;margin-top:30px;flex-wrap:wrap;}
+.bs-lp .spec-row div{display:flex;flex-direction:column;gap:2px;}
+.bs-lp .spec-row b{font-family:var(--serif);font-size:22px;}
+.bs-lp .spec-row small{font-size:13px;color:var(--ink-faint);letter-spacing:.06em;}
+/* flavors */
+.bs-lp .lp-flavors{padding:80px 0 100px;margin-top:60px;background:var(--paper);border-top:1px solid var(--line);}
+.bs-lp .sec-head{text-align:center;margin-bottom:54px;}
+.bs-lp .sec-head .latin{font-family:var(--latin);font-style:italic;font-size:22px;color:var(--gold-deep);display:block;margin-bottom:8px;}
+.bs-lp .sec-head h2{font-size:clamp(28px,3.4vw,44px);font-weight:600;}
+.bs-lp .flavor-stage{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-bottom:46px;}
+.bs-lp .flavor-img .ph{aspect-ratio:1;border-radius:50%;max-width:420px;margin:0 auto;box-shadow:0 30px 60px -40px rgba(44,36,28,.4);}
+.bs-lp .flavor-meta .ko{font-family:var(--latin);font-style:italic;font-size:20px;color:var(--gold-deep);}
+.bs-lp .flavor-meta h3{font-size:36px;font-weight:600;margin:6px 0 14px;transition:color .4s var(--ease);}
+.bs-lp .flavor-meta .desc{color:var(--ink-soft);max-width:440px;min-height:84px;}
+.bs-lp .flavors{display:flex;gap:13px;justify-content:center;flex-wrap:wrap;}
+.bs-lp .flavor{display:flex;align-items:center;gap:10px;padding:11px 18px 11px 12px;border:1px solid var(--line);border-radius:40px;cursor:pointer;transition:.35s var(--ease);background:var(--paper);font-weight:500;}
+.bs-lp .flavor .sw{width:22px;height:22px;border-radius:50%;flex:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06);}
+.bs-lp .flavor:hover{transform:translateY(-2px);}
+.bs-lp .flavor.active{border-color:var(--ink);background:var(--ink);color:var(--cream);}
+.bs-lp .flavor span{font-size:15px;letter-spacing:.05em;}
+/* features */
+.bs-lp .lp-feature{padding:100px 0;}
+.bs-lp .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:50px;}
+.bs-lp .feat-card{padding:38px 32px;border:1px solid var(--line);border-radius:14px;background:var(--paper);transition:.45s var(--ease);}
+.bs-lp .feat-card:hover{transform:translateY(-6px);box-shadow:0 30px 60px -36px rgba(44,36,28,.3);border-color:var(--gold);}
+.bs-lp .feat-card .num{font-family:var(--latin);font-style:italic;font-size:32px;color:var(--gold-deep);}
+.bs-lp .feat-card h4{font-size:22px;font-weight:600;margin:12px 0 10px;}
+.bs-lp .feat-card p{color:var(--ink-soft);font-size:15px;}
+/* enjoy */
+.bs-lp .lp-enjoy{padding:90px 0;background:var(--paper);border-top:1px solid var(--line);}
+.bs-lp .enjoy-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:46px;}
+.bs-lp .enjoy-card{display:flex;gap:20px;align-items:flex-start;padding:30px;border-radius:14px;background:var(--cream);border:1px solid var(--line);}
+.bs-lp .enjoy-card .t{font-family:var(--latin);font-style:italic;font-size:30px;color:var(--gold-deep);flex:none;}
+.bs-lp .enjoy-card b{font-family:var(--serif);font-size:20px;display:block;margin-bottom:6px;}
+.bs-lp .enjoy-card p{color:var(--ink-soft);font-size:14.5px;}
+/* faq */
+.bs-lp .lp-faq{padding:100px 0;}
+.bs-lp .faq-list{max-width:760px;margin:46px auto 0;}
+.bs-lp .faq-item{border-bottom:1px solid var(--line);}
+.bs-lp .faq-q{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;cursor:pointer;font-family:var(--serif);font-size:19px;font-weight:500;}
+.bs-lp .faq-q .ic{flex:none;width:22px;height:22px;position:relative;transition:transform .4s var(--ease);}
+.bs-lp .faq-q .ic::before,.bs-lp .faq-q .ic::after{content:"";position:absolute;background:var(--gold-deep);transition:.4s var(--ease);}
+.bs-lp .faq-q .ic::before{top:10px;left:0;width:22px;height:1.5px;}
+.bs-lp .faq-q .ic::after{top:0;left:10px;width:1.5px;height:22px;}
+.bs-lp .faq-item.open .faq-q .ic::after{transform:scaleY(0);}
+.bs-lp .faq-a{max-height:0;overflow:hidden;transition:max-height .45s var(--ease);}
+.bs-lp .faq-a p{color:var(--ink-soft);padding:0 0 24px;font-size:15px;}
+/* reveal */
+.bs-lp.js-anim .reveal{opacity:0;transform:translateY(34px);transition:opacity 1s var(--ease),transform 1s var(--ease);}
+.bs-lp.js-anim .reveal.in{opacity:1;transform:none;}
+@media(prefers-reduced-motion:reduce){.bs-lp.js-anim .reveal{opacity:1;transform:none;transition:none;}}
+@media(max-width:860px){
+  .bs-lp .wrap{padding:0 22px;}
+  .bs-lp .flavor-stage,.bs-lp .feat-grid,.bs-lp .enjoy-grid{grid-template-columns:1fr;gap:40px;}
+  .bs-lp .lp-flavors{margin-top:40px;}
+}
+</style>
+
+<div class="bs-lp" id="bsLp">
+
+  <!-- INTRO -->
+  <section class="lp-intro">
+    <div class="wrap reveal">
+      <div class="eyebrow">Signature No.1</div>
+      <div class="latin">Bite-sized Cheese Balls</div>
+      <p class="lead">外層微酥、內裡綿密的一口尺寸。以北海道奶油乳酪手工烘焙，純粹乳香、節制甜度。一口一個剛剛好，是辦公室、午後與旅途中最溫柔的相伴。</p>
+      <div class="spec-row">
+        <div><b>12 入</b><small>一口尺寸</small></div>
+        <div><b>-18°C</b><small>冷凍宅配</small></div>
+        <div><b>14 天</b><small>冷凍賞味</small></div>
+        <div><b>5 種</b><small>經典口味</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLAVORS -->
+  <section class="lp-flavors">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="latin">Five Flavors</span>
+        <h2>五種口味，五種心情</h2>
+      </div>
+      <div class="flavor-stage">
+        <div class="flavor-img reveal">
+          <div class="ph" id="fImg"><span>[ 乳酪球 · 原味 ]</span></div>
+        </div>
+        <div class="flavor-meta reveal">
+          <div class="ko" id="fKo">Original</div>
+          <h3 id="fName">經典原味</h3>
+          <p class="desc" id="fDesc">以北海道奶油乳酪為基底，烘烤出微酥外殼與濕潤內芯。純粹的乳香與恰到好處的鹹甜，是伴生最初、也最受歡迎的味道。</p>
+        </div>
+      </div>
+      <div class="flavors reveal" id="flavors-pick">
+        <div class="flavor active" data-i="0"><span class="sw" style="background:#E7C98C"></span><span>原味</span></div>
+        <div class="flavor" data-i="1"><span class="sw" style="background:#8E9C5E"></span><span>宇治抹茶</span></div>
+        <div class="flavor" data-i="2"><span class="sw" style="background:#6B4A33"></span><span>比利時巧克力</span></div>
+        <div class="flavor" data-i="3"><span class="sw" style="background:#E4D86A"></span><span>西西里檸檬</span></div>
+        <div class="flavor" data-i="4"><span class="sw" style="background:#C56B7A"></span><span>綜合莓果</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="lp-feature">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="latin">Why Bansheng</span>
+        <h2>對乳酪的三個堅持</h2>
+      </div>
+      <div class="feat-grid">
+        <div class="feat-card reveal"><div class="num">01</div><h4>嚴選乳酪</h4><p>指定使用北海道進口奶油乳酪，乳脂飽滿、酸度柔和，是綿密口感的根本。</p></div>
+        <div class="feat-card reveal"><div class="num">02</div><h4>節制的甜</h4><p>減糖配方，讓乳香成為主角。一口接一口，也不會有負擔的甜膩。</p></div>
+        <div class="feat-card reveal"><div class="num">03</div><h4>每日手作</h4><p>小批量、當日製作，無多餘添加。新鮮做、新鮮送，是我們不變的承諾。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENJOY -->
+  <section class="lp-enjoy">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="latin">How to Enjoy</span>
+        <h2>兩種溫度，兩種風味</h2>
+      </div>
+      <div class="enjoy-grid">
+        <div class="enjoy-card reveal"><div class="t">01</div><div><b>冷藏微涼</b><p>冷凍取出後移至冷藏退冰約 3～4 小時，口感緊實綿密，乳香清爽，最適合炎熱午後。</p></div></div>
+        <div class="enjoy-card reveal"><div class="t">02</div><div><b>常溫回甘</b><p>室溫靜置約 15 分鐘，外殼回軟、內芯化口，乳脂香氣更奔放，配茶配咖啡皆宜。</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="lp-faq">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="latin">FAQ</span>
+        <h2>常見問題</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal"><div class="faq-q">乳酪球怎麼保存？<span class="ic"></span></div><div class="faq-a"><p>收到後請立即冷凍保存（-18°C），冷凍最佳賞味期為 14 天。食用前再依喜好退冰至冷藏或常溫即可。</p></div></div>
+        <div class="faq-item reveal"><div class="faq-q">如何宅配？運費怎麼算？<span class="ic"></span></div><div class="faq-a"><p>全程冷凍宅配到府，全台皆可配送。訂單滿指定金額免運，未達門檻酌收冷凍運費，詳情以結帳頁面為準。</p></div></div>
+        <div class="faq-item reveal"><div class="faq-q">可以混搭不同口味嗎？<span class="ic"></span></div><div class="faq-a"><p>可以！12 入盒裝提供綜合口味選項，也可單一口味整盒。下單時於備註或選項中指定即可。</p></div></div>
+        <div class="faq-item reveal"><div class="faq-q">有提供禮盒包裝嗎？<span class="ic"></span></div><div class="faq-a"><p>有的，提供質感禮盒與專屬卡片服務，適合彌月、節慶與商務送禮。可於訂購時加選。</p></div></div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+(function () {
+  var root = document.getElementById('bsLp');
+  if (!root) return;
+  var flavorData = [
+    { ko: 'Original', name: '經典原味', color: '#E7C98C', desc: '以北海道奶油乳酪為基底，烘烤出微酥外殼與濕潤內芯。純粹的乳香與恰到好處的鹹甜，是伴生最初、也最受歡迎的味道。' },
+    { ko: 'Uji Matcha', name: '宇治抹茶', color: '#8E9C5E', desc: '選用日本宇治抹茶，茶香在乳酪的綿密中緩緩展開，微苦回甘的尾韻，是大人系的優雅選擇。' },
+    { ko: 'Chocolat', name: '比利時巧克力', color: '#6B4A33', desc: '融入比利時調溫巧克力，可可的醇厚與乳酪的酸香交織，濃郁而不膩，是甜點控的心頭好。' },
+    { ko: 'Lemon', name: '西西里檸檬', color: '#E4D86A', desc: '點綴西西里檸檬皮屑，清新酸香劃過綿密乳酪，明亮而爽口，最適合炎炎午後的一口清爽。' },
+    { ko: 'Berry', name: '綜合莓果', color: '#C56B7A', desc: '草莓、藍莓與覆盆子交織的酸甜，與乳酪交融出粉嫩浪漫的滋味，是少女心的最佳代名詞。' }
+  ];
+  var fImg = document.getElementById('fImg'), fKo = document.getElementById('fKo'), fName = document.getElementById('fName'), fDesc = document.getElementById('fDesc');
+  root.querySelectorAll('.flavor').forEach(function (f) {
+    f.addEventListener('click', function () {
+      var act = root.querySelector('.flavor.active'); if (act) act.classList.remove('active');
+      f.classList.add('active');
+      var d = flavorData[+f.dataset.i];
+      if (fImg) { fImg.style.backgroundColor = d.color; var s = fImg.querySelector('span'); if (s) s.textContent = '[ 乳酪球 · ' + d.name + ' ]'; }
+      if (fKo) fKo.textContent = d.ko;
+      if (fName) { fName.textContent = d.name; fName.style.color = d.color; }
+      if (fDesc) fDesc.textContent = d.desc;
+    });
+  });
+  root.querySelectorAll('.faq-item').forEach(function (item) {
+    var q = item.querySelector('.faq-q'), a = item.querySelector('.faq-a'); if (!q || !a) return;
+    q.addEventListener('click', function () { var open = item.classList.toggle('open'); a.style.maxHeight = open ? a.scrollHeight + 'px' : '0'; });
+  });
+  var reveals = root.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    root.classList.add('js-anim');
+    var reveal = function (el) { el.classList.add('in'); };
+    reveals.forEach(function (el) { var r = el.getBoundingClientRect(); if (r.top < window.innerHeight * 0.9) reveal(el); });
+    var io = new IntersectionObserver(function (entries) { entries.forEach(function (e) { if (e.isIntersecting) { reveal(e.target); io.unobserve(e.target); } }); }, { threshold: .14 });
+    reveals.forEach(function (el) { if (!el.classList.contains('in')) io.observe(el); });
+    setTimeout(function () { reveals.forEach(reveal); }, 2500);
+  }
+})();
+</script>
